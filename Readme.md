@@ -1,4 +1,4 @@
-## Usage
+# Usage
 
 This template contains some simple `gulp` tasks. They are as follows:
 
@@ -17,7 +17,7 @@ There are many more tasks, and you really should read through the `gulpfile.js`,
 - Roboto // https://www.google.com/fonts#UsePlace:use/Collection:Roboto
 - Google's Material Icon Font // https://www.google.com/design/icons/
 
-# Git
+### Git
 
 - git add .
 - git commit
