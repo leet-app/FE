@@ -1,0 +1,26 @@
+// VARIABLES
+$rb: 'Roboto', 'sans-serif';
+$nu: 'Nunito', 'sans-serif';
+
+$main: RGB(0, 176, 242);
+// END
+
+// MIXINS
+// END
+
+body {
+  font-family: $rb;
+}
+
+nav {
+  background-color: $main;
+  height:50px;
+  line-height:50px;
+
+  .logo {
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    font-family: $nu;
+  }
+}

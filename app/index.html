@@ -7,6 +7,7 @@
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
   <!-- END -->
 
   <!-- CSS -->
@@ -16,10 +17,21 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- END -->
 </head>
-<body>
+<body ng-app="LeetApp">
   
   <!-- CONTAINER -->
-  <div class="container"></div>
+
+  <nav>
+    <div class="logo">
+      <i class="material-icons">&#xE904;</i>
+      <span>leet</span>
+      <i class="material-icons">&#xE905;</i>
+    </div>
+
+  </nav>
+
+  <div class="container" ui-view>
+  </div>
   <!-- END -->
 
   <!-- VENDOR -->
