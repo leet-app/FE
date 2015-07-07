@@ -11,19 +11,6 @@ $w: white;
 $opacityw7: rgba(255, 255, 255, .7);
 $opacityw4: rgba(255, 255, 255, .4);
 
-
-//Register Page
-.register h2 {
-    margin-left: 206px;
-    margin-top: 46px;
-}
-.regform {
-  // margin-left: 18px;
-}
-.reglayout {
-  width: 600px;
-}
-
 html {
   background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -75,4 +62,16 @@ nav {
     .md-button {
       background-color: transparent;
     }
+}
+
+//Register Page
+.register h2 {
+    margin-left: 206px;
+    margin-top: 46px;
+}
+.regform {
+  // margin-left: 18px;
+}
+.register-form {
+  width: 600px;
 }

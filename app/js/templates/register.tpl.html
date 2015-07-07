@@ -1,45 +1,46 @@
-<div class="register">
-    <h2>Register</h2>
-</div>
-<div class="regform"layout layout-md="column">
-    <div class="reglayout" layout="row">
-        <div flex offset="33">
-            <md-input-container flex>
-                <label>First Name</label>
-                <input ng-model="user.firstName">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Last Name</label>
-                <input ng-model="user.lastName">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Email</label>
-                <input ng-model="user.email">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Phone Number</label>
-                <input ng-model="user.phone">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Avatar Url</label>
-                <input ng-model="user.avatar">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Linked In Url</label>
-                <input ng-model="user.linkedin">
-            </md-input-container>
 
-            <md-content layout-padding layout-md="column">
-                <md-input-container>
-                    <label>Username</label>
-                    <input ng-model="user.title">
+
+<form class="register-form">
+<h2>Register</h2>
+    <div class="reg" layout layout-md="column">
+        <div class="reglayout" layout="row">
+            <div flex offset="33">
+                <md-input-container flex>
+                    <label>First Name</label>
+                    <input ng-model="user.firstName">
                 </md-input-container>
-                <md-input-container>
-                    <label>Password</label>
-                    <input ng-model="user.email" type="email">
+                <md-input-container flex>
+                    <label>Last Name</label>
+                    <input ng-model="user.lastName">
                 </md-input-container>
-            </md-content>
-            <md-button>Submit</md-button>
+                <md-input-container flex>
+                    <label>Email</label>
+                    <input ng-model="user.email">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Phone Number</label>
+                    <input ng-model="user.phone">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Avatar Url</label>
+                    <input ng-model="user.avatar">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Linked In Url</label>
+                    <input ng-model="user.linkedin">
+                </md-input-container>
+                <md-content layout-padding layout-md="column">
+                    <md-input-container>
+                        <label>Username</label>
+                        <input ng-model="user.title">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Password</label>
+                        <input ng-model="user.email" type="email">
+                    </md-input-container>
+                </md-content>
+                <md-button>Submit</md-button>
+            </div>
         </div>
     </div>
-</div>
+</form>
