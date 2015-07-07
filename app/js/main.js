@@ -13,6 +13,11 @@
       }
     })
 
+    .config(function($mdThemingProvider) {
+      $mdThemingProvider.theme('default')
+        .primaryPalette('blue');
+    })
+
     .config([ '$stateProvider', '$urlRouterProvider', 
 
       function ($stateProvider, $urlRouterProvider) {
