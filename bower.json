@@ -24,7 +24,8 @@
     "angular-ui-router": "~0.2.15",
     "font-awesome": "~4.3.0",
     "angular-loading-bar": "~0.8.0",
-    "material-design-icons": "~2.0.0"
+    "material-design-icons": "~2.0.0",
+    "material-design-lite": "~1.0.0"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
