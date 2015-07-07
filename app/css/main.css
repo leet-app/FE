@@ -1,19 +1,38 @@
-body#background {
-  background-image: url("app/assets/people-sign-traveling-blur.jpg") no-repeat 50% 50% fixed;
-  background-size: cover;
+html {
+  background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -webkit-background-size: cover; }
+  background-size: cover; }
 
 body {
-  font-family: "Roboto", "sans-serif"; }
+  font-family: "Roboto", "sans-serif";
+  background-color: transparent; }
+  body a {
+    text-decoration: none; }
 
 nav {
-  background-color: RGB(0, 176, 242);
-  height: 50px;
-  line-height: 50px; }
+  background-color: transparent;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
   nav .logo {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     font-family: "Nunito", "sans-serif"; }
+    nav .logo a {
+      color: white; }
+      nav .logo a:visited {
+        color: white; }
+
+.login {
+  color: white;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 15%;
+  padding: 50px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.7); }
+  .login .md-button {
+    background-color: transparent; }
