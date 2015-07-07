@@ -1,26 +1,36 @@
 // VARIABLES
-$rb: 'Roboto', 'sans-serif';
-$nu: 'Nunito', 'sans-serif';
-
+$rb: 'Roboto',
+'sans-serif';
+$nu: 'Nunito',
+'sans-serif';
 $main: RGB(0, 176, 242);
 // END
-
 // MIXINS
 // END
-
 body {
-  font-family: $rb;
+    font-family: $rb;
 }
 
 nav {
-  background-color: $main;
-  height:60px;
-  line-height:50px;
+    background-color: $main;
+    height: 60px;
+    line-height: 50px;
+    .logo {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-family: $nu;
+    }
+}
 
-  .logo {
-    text-align: center;
-    color:white;
-    font-size: 30px;
-    font-family: $nu;
-  }
+//Register Page
+.register h2 {
+    margin-left: 206px;
+    margin-top: 46px;
+}
+.regform {
+  // margin-left: 18px;
+}
+.reglayout {
+  width: 600px;
 }

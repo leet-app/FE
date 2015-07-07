@@ -3,10 +3,17 @@ body {
 
 nav {
   background-color: RGB(0, 176, 242);
-  height: 50px;
+  height: 60px;
   line-height: 50px; }
   nav .logo {
     text-align: center;
     color: white;
     font-size: 30px;
     font-family: "Nunito", "sans-serif"; }
+
+.register h2 {
+  margin-left: 206px;
+  margin-top: 46px; }
+
+.reglayout {
+  width: 600px; }
