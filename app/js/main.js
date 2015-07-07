@@ -2,9 +2,9 @@
   
   'use strict';
 
-  var app = angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar']);
+  angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
 
-    app.config([ '$stateProvider', '$urlRouterProvider', 
+    .config([ '$stateProvider', '$urlRouterProvider', 
 
       function ($stateProvider, $urlRouterProvider) {
 

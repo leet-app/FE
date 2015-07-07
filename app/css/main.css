@@ -1,3 +1,10 @@
+body#background {
+  background-image: url("app/assets/people-sign-traveling-blur.jpg") no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover; }
+
 body {
   font-family: "Roboto", "sans-serif"; }
 

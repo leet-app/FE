@@ -8,13 +8,21 @@ $main: RGB(0, 176, 242);
 // MIXINS
 // END
 
+body#background {
+  background-image:url('app/assets/people-sign-traveling-blur.jpg') no-repeat 50% 50% fixed;
+  background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      -webkit-background-size:cover;
+}
+
 body {
   font-family: $rb;
 }
 
 nav {
   background-color: $main;
-  height:60px;
+  height:50px;
   line-height:50px;
 
   .logo {
