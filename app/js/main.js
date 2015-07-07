@@ -4,6 +4,15 @@
 
   angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
 
+    .constant('RB', {
+      URL: '',
+      CONFIG: {
+        headers: {
+
+        }
+      }
+    })
+
     .config([ '$stateProvider', '$urlRouterProvider', 
 
       function ($stateProvider, $urlRouterProvider) {
@@ -14,12 +23,17 @@
           .state('home', {
             url: '/',
             templateUrl: 'js/templates/home.tpl.html',
-            controller: ''
+            controller: 'UserControl'
           })
 
           .state('register', {
             url: '/register',
             templateUrl: 'js/templates/register.tpl.html',
+            controller: 'UserControl'
+          })
+          .state('dash', {
+            url: '/dash',
+            templateUrl: 'js/templates/dash.tpl.html',
             controller: ''
           });
       }

@@ -43,3 +43,12 @@ nav {
   background-color: rgba(255, 255, 255, 0.7); }
   .login .md-button {
     background-color: transparent; }
+
+.register {
+  color: white;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 15%;
+  padding: 50px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.7); }

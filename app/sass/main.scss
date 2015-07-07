@@ -1,15 +1,28 @@
 // VARIABLES
 $rb: 'Roboto', 'sans-serif';
 $nu: 'Nunito', 'sans-serif';
-
 $mainblue: RGB(0, 176, 242);
 $t: transparent;
 $w: white;
 
 // opacity white
-
 $opacityw7: rgba(255, 255, 255, .7);
 $opacityw4: rgba(255, 255, 255, .4);
+// end
+
+// mixins
+@mixin userforms() {
+  color:white;
+  width:700px;
+  margin: 0 auto;
+  margin-top:15%;
+  padding:50px;
+  border-radius:3px;
+  background-color: $opacityw7;
+}
+// end
+
+// END
 
 
 //Register Page
@@ -64,15 +77,15 @@ nav {
 // HOME PAGE
 
 .login {
-  color:white;
-  width:700px;
-  margin: 0 auto;
-  margin-top:15%;
-  padding:50px;
-  border-radius:3px;
-  background-color: $opacityw7;
+  @include userforms();
 
     .md-button {
       background-color: transparent;
     }
+}
+
+// REGISTER PAGE
+
+.register {
+  @include userforms();
 }
