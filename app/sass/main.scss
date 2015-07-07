@@ -24,19 +24,6 @@ $opacityw4: rgba(255, 255, 255, .4);
 
 // END
 
-
-//Register Page
-.register h2 {
-    margin-left: 206px;
-    margin-top: 46px;
-}
-.regform {
-  // margin-left: 18px;
-}
-.reglayout {
-  width: 600px;
-}
-
 html {
   background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -84,8 +71,12 @@ nav {
     }
 }
 
-// REGISTER PAGE
-
+//Register Page
 .register {
+
   @include userforms();
+
+  h2 {
+    text-align: center;
+  }
 }
