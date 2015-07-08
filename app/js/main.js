@@ -5,7 +5,7 @@
   angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
 
     .constant('RB', {
-      URL: '',
+      URL: 'http://floating-garden-2631.herokuapp.com/',
       CONFIG: {
         headers: {
 
