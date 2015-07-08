@@ -26,14 +26,23 @@ nav {
       nav .logo a:visited {
         color: white; }
 
+.container {
+  clear: both; }
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: none; }
+
 .login {
   color: white;
   width: 700px;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-bottom: 100px;
+  margin-top: 100px;
   padding: 50px;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 15%; }
   .login a {
     color: white; }
     .login a:visited {
@@ -45,7 +54,8 @@ nav {
   color: white;
   width: 700px;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-bottom: 100px;
+  margin-top: 100px;
   padding: 50px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.7); }

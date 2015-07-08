@@ -16,7 +16,8 @@ $opacityw4: rgba(255, 255, 255, .4);
   color:white;
   width:700px;
   margin: 0 auto;
-  margin-top:15%;
+  margin-bottom: 100px;
+  margin-top: 100px;
   padding:50px;
   border-radius:3px;
   background-color: $opacityw7;
@@ -62,10 +63,19 @@ nav {
   }
 }
 
+.container {
+  clear:both;
+}
+
+footer {
+  border-top: 1px solid $opacityw4;
+  background-color:none;
+}
 // HOME PAGE
 
 .login {
   @include userforms();
+  margin-top:15%;
 
   a {
     color:$w;
