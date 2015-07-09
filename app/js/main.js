@@ -1,5 +1,5 @@
 ;(function (){
-  
+
   'use strict';
 
   angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
@@ -18,7 +18,7 @@
         .primaryPalette('blue');
     })
 
-    .config([ '$stateProvider', '$urlRouterProvider', 
+    .config([ '$stateProvider', '$urlRouterProvider',
 
       function ($stateProvider, $urlRouterProvider) {
 
@@ -28,13 +28,13 @@
           .state('home', {
             url: '/',
             templateUrl: 'js/templates/home.tpl.html',
-            controller: 'UserControl'
+            controller: ''
           })
 
           .state('register', {
             url: '/register',
             templateUrl: 'js/templates/register.tpl.html',
-            controller: 'UserControl'
+            controller: 'RegisterCtrl'
           })
           .state('dash', {
             url: '/dash',
