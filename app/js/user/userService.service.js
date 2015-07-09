@@ -37,6 +37,11 @@
         var u = new User(account);
         console.log(u);
       };
+
+      this.userLogin = function (account) {
+        var l = new Login(account);
+        console.log(l);
+      };
     }
 
   ]);

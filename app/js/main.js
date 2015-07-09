@@ -28,7 +28,7 @@
           .state('home', {
             url: '/',
             templateUrl: 'js/templates/home.tpl.html',
-            controller: ''
+            controller: 'LoginCtrl'
           })
 
           .state('register', {
