@@ -27,7 +27,8 @@ nav {
         color: white; }
 
 .container {
-  clear: both; }
+  width: 85%;
+  margin: 0 auto; }
 
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.4);

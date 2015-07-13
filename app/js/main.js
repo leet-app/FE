@@ -36,10 +36,10 @@
             templateUrl: 'js/templates/register.tpl.html',
             controller: 'RegisterCtrl'
           })
-          .state('dash', {
-            url: '/dash',
-            templateUrl: 'js/templates/dash.tpl.html',
-            controller: ''
+          .state('dashboard', {
+            url: '/dashboard',
+            templateUrl: 'js/templates/dashboard.tpl.html',
+            controller: 'DashboardCtrl'
           });
       }
 
