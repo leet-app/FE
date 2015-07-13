@@ -44,10 +44,8 @@ body {
 
 nav {
   background-color: $t;
-  height:70px;
-  line-height:70px;
+  line-height:64px;
   border-bottom: 1px solid $opacityw4;
-  // opacity: .95;
 
   .logo {
     text-align: center;
@@ -66,12 +64,9 @@ nav {
 .container {
   width:85%;
   margin: 0 auto;
+  clear:both;
 }
 
-footer {
-  border-top: 1px solid $opacityw4;
-  background-color:none;
-}
 // HOME PAGE
 
 .login {
@@ -90,7 +85,7 @@ footer {
     }
 }
 
-//Register Page
+//REGISTER PAGE
 .register {
   @include userforms();
 
@@ -98,3 +93,5 @@ footer {
     text-align: center;
   }
 }
+
+// DASHBOARD

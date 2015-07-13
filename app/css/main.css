@@ -13,8 +13,7 @@ body {
 
 nav {
   background-color: transparent;
-  height: 70px;
-  line-height: 70px;
+  line-height: 64px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
   nav .logo {
     text-align: center;
@@ -28,11 +27,8 @@ nav {
 
 .container {
   width: 85%;
-  margin: 0 auto; }
-
-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: none; }
+  margin: 0 auto;
+  clear: both; }
 
 .login {
   color: white;
