@@ -1,5 +1,11 @@
 <form class="register" ng-submit="createUser(user)">
-    <h2>register</h2>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h3>
+            <span>Register</span>
+          </h3>
+        </div>
+      </md-toolbar>
     <md-input-container flex>
         <label>First Name</label>
         <input ng-model="user.first">
@@ -32,5 +38,5 @@
         <label>Avatar Url</label>
         <input ng-model="user.avatar">
     </md-input-container>
-    <md-button>Submit</md-button>
+    <md-button class="md-raised md-primary" type="submit">Submit</md-button>
 </form>

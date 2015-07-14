@@ -22,6 +22,14 @@ $opacityw4: rgba(255, 255, 255, .4);
   line-height:20px;
   background-color: $opacityw7;
 }
+
+@mixin csscentertag() {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: center;
+}
 // end
 
 // END
@@ -48,8 +56,8 @@ nav {
   line-height:64px;
   border-bottom: 1px solid $opacityw4;
   color:white;
-  position: fixed;
-  top:0;
+  // position: fixed;
+  // top:0;
   margin-bottom:10vh;
   width:100vw;
 
@@ -93,9 +101,8 @@ nav {
       color:$w;
     }
   }
-
     .md-button {
-      background-color: transparent;
+      @include csscentertag();
     }
 }
 
