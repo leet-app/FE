@@ -19,7 +19,7 @@ nav {
   color: white;
   position: fixed;
   top: 0;
-  margin-bottom: 25%;
+  margin-bottom: 10vh;
   width: 100vw; }
   nav .logo {
     text-align: center;
@@ -43,11 +43,12 @@ nav {
 
 .login {
   color: white;
-  width: 700px;
+  width: 50vw;
   margin: 0 auto;
   clear: both;
   padding: 50px;
   border-radius: 3px;
+  line-height: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   margin-top: 15%; }
   .login a {
@@ -59,14 +60,16 @@ nav {
 
 .register {
   color: white;
-  width: 700px;
+  width: 50vw;
   margin: 0 auto;
   clear: both;
   padding: 50px;
   border-radius: 3px;
+  line-height: 20px;
   background-color: rgba(255, 255, 255, 0.7); }
   .register h2 {
     text-align: center; }
 
 .md-sidenav {
-  height: 100vh; }
+  height: 100vh;
+  background-color: red; }
