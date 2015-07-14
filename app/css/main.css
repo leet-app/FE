@@ -7,23 +7,34 @@ html {
 
 body {
   font-family: "Roboto", "sans-serif";
-  background-color: transparent; }
+  background-color: transparent;
+  outline: none; }
   body a {
     text-decoration: none; }
 
 nav {
   background-color: transparent;
   line-height: 64px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  position: fixed;
+  top: 0;
+  margin-bottom: 25%;
+  width: 100vw; }
   nav .logo {
     text-align: center;
+    margin: 0 auto;
     color: white;
     font-size: 35px;
-    font-family: "Nunito", "sans-serif"; }
+    font-family: "Nunito", "sans-serif";
+    width: 200px; }
     nav .logo a {
       color: white; }
       nav .logo a:visited {
         color: white; }
+  nav .hamburger {
+    float: left;
+    padding-left: 3%; }
 
 .container {
   width: 85%;
@@ -34,8 +45,7 @@ nav {
   color: white;
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  clear: both;
   padding: 50px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -51,10 +61,12 @@ nav {
   color: white;
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  clear: both;
   padding: 50px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.7); }
   .register h2 {
     text-align: center; }
+
+.md-sidenav {
+  height: 100vh; }

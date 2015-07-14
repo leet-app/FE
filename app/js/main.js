@@ -5,7 +5,7 @@
   angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
 
     .constant('RB', {
-      URL: 'http://floating-garden-2631.herokuapp.com/',
+      URL: 'https://leetapp.herokuapp.com/',
       CONFIG: {
         headers: {
 
@@ -25,22 +25,39 @@
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-          .state('home', {
-            url: '/',
-            templateUrl: 'js/templates/home.tpl.html',
-            controller: 'LoginCtrl'
-          })
-
-          .state('register', {
-            url: '/register',
-            templateUrl: 'js/templates/register.tpl.html',
-            controller: 'RegisterCtrl'
-          })
-          .state('dashboard', {
-            url: '/dashboard',
-            templateUrl: 'js/templates/dashboard.tpl.html',
-            controller: 'DashboardCtrl'
-          });
+        .state('home', {
+          url: '/',
+            views: {
+              'main' : {
+                templateUrl: 'js/templates/home.tpl.html',
+                controller: 'LoginCtrl'
+              },
+              'sidebar' : {
+                templateUrl: 'js/templates/homenav.tpl.html'
+              }
+          }
+        })
+        .state('register', {
+          url: '/register',
+          views: {
+            'main': { 
+              templateUrl: 'js/templates/register.tpl.html',
+              controller: 'RegisterCtrl'
+            },
+            'sidebar' : {
+                templateUrl: 'js/templates/homenav.tpl.html'
+            }
+          }
+        })
+        .state('dashboard', {
+          url: '/dashboard',
+          views: {
+            'main': { 
+              templateUrl: 'js/templates/dashboard.tpl.html',
+              controller: 'DashboardCtrl'
+            }
+          }
+        });
       }
 
   ]);
