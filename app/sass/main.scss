@@ -14,7 +14,7 @@ $opacityw4: rgba(255, 255, 255, .4);
 // mixins
 @mixin userforms() {
   color:white;
-  width:50vw;
+  width:50%;
   margin: 0 auto;
   clear:both;
   padding:50px;
@@ -46,6 +46,8 @@ body {
   font-family: $rb;
   background-color: $t;
   outline:none;
+  padding-left:0px;
+  padding-right:0px;
     a {
       text-decoration: none;
     }
@@ -55,11 +57,9 @@ nav {
   background-color: $t;
   line-height:64px;
   border-bottom: 1px solid $opacityw4;
-  color:white;
-  // position: fixed;
-  // top:0;
-  margin-bottom:10vh;
-  width:100vw;
+  color:$w;
+  margin-bottom:5em;
+  width:100%;
 
 
   .logo {
@@ -86,14 +86,12 @@ nav {
 .container {
   width:85%;
   margin: 0 auto;
-  clear:both;
 }
 
 // HOME PAGE
 
 .login {
   @include userforms();
-  margin-top:15%;
 
   a {
     color:$w;
@@ -109,10 +107,6 @@ nav {
 //REGISTER PAGE
 .register {
   @include userforms();
-
-  h2 {
-    text-align: center;
-  }
 }
 
 // DASHBOARD
@@ -120,6 +114,5 @@ nav {
 //NAVBAR
 
 .md-sidenav {
-  height:100vh;
   background-color:red;
 }
