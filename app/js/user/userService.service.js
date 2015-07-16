@@ -4,43 +4,44 @@
 
   angular.module('LeetApp')
 
-  .service('UserService', [ 'RB', '$http',
+  .service('UserService', [ 'RB', '$http', '$location', '$cookies',
 
-    function (RB, $http) {
-      // endpoints we need (variables)
+    function (RB, $http, $location, $cookies) {
 
       var regEndpoint = RB.URL + 'users/register',
           logEndpoint = RB.URL + 'users/login';
 
-      // register blueprint (constructor)
-
       var User = function (options) {
-        this.first = options.first;
-        this.last = options.last;
+        this.first_name = options.first_name;
+        this.last_name = options.last_name;
         this.email = options.email;
-        this.username = options.username;
-        this.phone = options.phone;
-        this.avatar = options.avatar;
-        this.linked_in = options.linked_in;
+        this.user_name = options.user_name;
+        this.password = options.password;
+        // this.phone = options.phone;
+        // this.avatar = options.avatar;
       };
-
-      // login blueprint (constructor)
 
       var Login = function (options) {
         this.username = options.username;
         this.password = options.password;
       };
 
-      // user register (function)
-
       this.newUser = function (account) {
         var u = new User(account);
-        console.log(u);
+
+        return $http.post(regEndpoint, u).success(function(data) {
+          $location.path('/dashboard');
+          console.log('userdata', data);
+        }).error(function(data){
+          console.log(data.errors);
+        });
       };
 
       this.userLogin = function (account) {
         var l = new Login(account);
         console.log(l);
+        // $cookies.put('sessionToken', data.access_token);
+        // RB.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
       };
     }
 

@@ -2,13 +2,13 @@
 
   'use strict';
 
-  angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar'])
+  angular.module('LeetApp', ['ui.router', 'ngMaterial', 'angular-loading-bar', 'ngCookies'])
 
     .constant('RB', {
       URL: 'https://leetapp.herokuapp.com/',
       CONFIG: {
         headers: {
-
+          'Access-Token' : ''
         }
       }
     })

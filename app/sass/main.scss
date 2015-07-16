@@ -12,9 +12,9 @@ $opacityw4: rgba(255, 255, 255, .4);
 // end
 
 // mixins
-@mixin userforms() {
+@mixin contentdiv($width) {
   color:white;
-  width:50%;
+  width:$width;
   margin: 0 auto;
   clear:both;
   padding:50px;
@@ -22,33 +22,38 @@ $opacityw4: rgba(255, 255, 255, .4);
   line-height:20px;
   margin-bottom:5em;
   background-color: $opacityw7;
+  form {
+    @include csscentertag(left);
+  }
 }
 
-@mixin csscentertag() {
+@mixin csscentertag($align) {
   margin-left: auto;
   margin-right: auto;
   margin-top: 3px;
   margin-bottom: 3px;
-  text-align: center;
+  text-align: $align;
+}
+
+@mixin fullpagebg($path) {
+  background: $path no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 // end
 
 // END
 
 html {
-  background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include fullpagebg(url(../images/black-and-white-city-man-people.jpg));
 }
 
 body {
   font-family: $rb;
   background-color: $t;
   outline:none;
-  padding-left:0px;
-  padding-right:0px;
     a {
       text-decoration: none;
     }
@@ -92,7 +97,7 @@ nav {
 // HOME PAGE
 
 .login {
-  @include userforms();
+  @include contentdiv(50%);
 
   a {
     color:$w;
@@ -100,19 +105,17 @@ nav {
       color:$w;
     }
   }
-    .md-button {
-      @include csscentertag();
-    }
 }
 
 //REGISTER PAGE
 .register {
-  @include userforms();
+  @include contentdiv(50%);
 }
 
 // DASHBOARD
+// END
 
-//NAVBAR
+//SIDEBAR
 
 .side {
   background-color:red;
