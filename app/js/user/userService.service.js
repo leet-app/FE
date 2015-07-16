@@ -30,7 +30,7 @@
         var u = new User(account);
 
         return $http.post(regEndpoint, u).success(function(data) {
-          $location.path('/dashboard');
+          $location.path('/login');
           console.log('userdata', data);
         }).error(function(data){
           console.log(data.errors);

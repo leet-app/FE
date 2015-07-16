@@ -1,0 +1,21 @@
+
+<div class="login">
+  <form layout-padding ng-submit="userLogin(user)">
+  <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h3>
+          <span>Login</span>
+        </h3>
+      </div>
+    </md-toolbar>
+      <md-input-container>
+        <label>Username</label>
+        <input type="text" ng-model="user.username">
+      </md-input-container>
+      <md-input-container>
+        <label>Password</label>
+        <input type="password" ng-model="user.password">
+      </md-input-container>
+      <md-button class="md-raised md-primary" type="submit">Login</md-button> <a class="md-raised md-primary" href="#/register">Register</a>
+  </form>
+</div>
