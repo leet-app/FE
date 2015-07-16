@@ -17,8 +17,8 @@
         this.email = options.email;
         this.user_name = options.user_name;
         this.password = options.password;
-        // this.phone = options.phone;
-        // this.avatar = options.avatar;
+        this.phone = options.phone;
+        this.avatar = options.avatar;
       };
 
       var Login = function (options) {
