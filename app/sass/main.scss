@@ -13,7 +13,7 @@ $opacityw4: rgba(255, 255, 255, .4);
 
 // mixins
 @mixin contentdiv($width) {
-  color:white;
+  // color:white;
   width:$width;
   margin: 0 auto;
   clear:both;
@@ -113,6 +113,21 @@ nav {
 }
 
 // DASHBOARD
+
+.dashboard {
+  .addlayover {
+    @include contentdiv(50%);
+  }
+
+  .userlayovers {
+    @include contentdiv(50%);
+    .md-list {
+      span {
+        float:right;
+      }
+    }
+  }
+}
 // END
 
 //SIDEBAR

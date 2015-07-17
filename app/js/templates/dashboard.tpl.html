@@ -1,1 +1,54 @@
-<h1>hi!!!!</h1>
+<div class="dashboard">
+
+  <div class="addlayover">
+    
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h3>
+          <span>add a layover</span>
+        </h3>
+      </div>
+    </md-toolbar>
+
+    <form layout-padding ng-submit="">
+        <md-input-container>
+            <label>Airport (ATL, LAX, JFK, etc.)</label>
+            <input ng-model="layover.short_code" type="text">
+        </md-input-container>
+        <md-input-container>
+            <label>City (Atlanta, Los Angeles, New York City)</label>
+            <input ng-model="layover.city" type="text">
+        </md-input-container>
+        <md-input-container>
+            <label>Departure Time</label>
+            <input ng-model="layover.arrival_time" type="time">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Arrival Time</label>
+            <input ng-model="layover.dept_time" type="time">
+        </md-input-container>
+        <md-button class="md-raised md-primary">Submit</md-button>
+    </form>
+
+  </div>
+
+    <div class="userlayovers">
+      <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h3>
+              <span>your layovers</span>
+            </h3>
+          </div>
+      </md-toolbar>
+
+        <md-list>
+          <md-list-item>ATL - June 4, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
+          <md-divider ></md-divider>
+          <md-list-item>LAX - June 8, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
+          <md-divider ></md-divider>
+          <md-list-item>JFK - June 12, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
+        </md-list>
+    </div>
+
+</div>
