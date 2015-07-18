@@ -38,10 +38,6 @@
         console.log('userdata', data);
       };
 
-      var _logErrors = function (data) {
-        console.log(data.errors);
-      };
-
       var User = function (options) {
         this.first_name = options.first_name;
         this.last_name = options.last_name;
@@ -68,7 +64,7 @@
         return $http.post(regEndpoint, u).success(function(data) {
           _routeNewUser(data);
         }).error(function(data){
-          _logErrors(data);
+          swal('Error', 'Form errors. Please try again.', 'error');
         });
       };
 
@@ -79,7 +75,7 @@
           _setCookies(data);
         })
         .error(function(data) {
-          swal("Error", data.message + ' Please try again or register.', "error");
+          swal('Error', data.message + ' Please try again.', 'error');
         });
       };
 
