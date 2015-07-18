@@ -81,7 +81,7 @@
 
       this.userLogout = function () {
         $cookies.remove('Access-Token');
-        accessToken = '';
+        accessToken = undefined;
         $location.path('/login');
       };
     }
