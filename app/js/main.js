@@ -70,7 +70,8 @@
             },
 
             'sidebar': {
-              templateUrl: 'js/templates/dashnav.tpl.html'
+              templateUrl: 'js/templates/dashnav.tpl.html',
+              controller: 'UserCtrl'
             }
           }
         });
@@ -80,7 +81,7 @@
 
   .run(['UserService', '$rootScope',
 
-    function(UserService, $rootScope){
+    function(UserService, $rootScope) {
 
       $rootScope.$on('$routeChangeStart', function () {
         UserService.checkUser();

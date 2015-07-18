@@ -77,8 +77,10 @@
 
         return $http.post(loginEndpoint, l).success(function (data){
           _setCookies(data);
+        })
+        .error(function(data) {
+          swal("Error", data.message + ' Please try again or register.', "error");
         });
-
       };
 
       this.userLogout = function () {
