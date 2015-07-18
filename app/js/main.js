@@ -42,7 +42,7 @@
             views: {
               'main' : {
                 templateUrl: 'js/templates/login.tpl.html',
-                controller: 'LoginCtrl'
+                controller: 'UserCtrl'
               },
               'sidebar' : {
                 templateUrl: 'js/templates/homenav.tpl.html'
@@ -54,7 +54,7 @@
           views: {
             'main': { 
               templateUrl: 'js/templates/register.tpl.html',
-              controller: 'RegisterCtrl'
+              controller: 'UserCtrl'
             },
             'sidebar' : {
                 templateUrl: 'js/templates/homenav.tpl.html'
@@ -67,11 +67,25 @@
             'main': { 
               templateUrl: 'js/templates/dashboard.tpl.html',
               controller: 'DashboardCtrl'
+            },
+
+            'sidebar': {
+              templateUrl: 'js/templates/dashnav.tpl.html'
             }
           }
         });
       }
 
+  ])
+
+  .run(['UserService', '$rootScope',
+
+    function(UserService, $rootScope){
+
+      $rootScope.$on('$routeChangeStart', function () {
+        UserService.checkUser();
+      });
+    }
   ]);
 
 }());

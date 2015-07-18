@@ -9,7 +9,38 @@
     function (RB, $http, $location, $cookies) {
 
       var regEndpoint = RB.URL + 'users/register',
-          logEndpoint = RB.URL + 'users/login';
+          loginEndpoint = RB.URL + 'users/login',
+          accessToken = RB.CONFIG.headers['Access-Token'];
+
+      var _routeUser = function (token) {
+        if (token === undefined) {
+          $location.path('/register');
+        } else if($location.path() === '/register') {
+          $location.path('/dashboard');
+        }
+      };
+
+      var _updateToken = function (token) {
+        if (token !== undefined) {
+          accessToken = token;
+        }
+        _routeUser(token);
+      };
+
+      var _setCookies = function (data) {
+        console.log(data);
+        $cookies.put('Access-Token', data.access_token);
+        $location.path('/dashboard');
+      };
+
+      var _routeNewUser = function(data) {
+        $location.path('/login');
+        console.log('userdata', data);
+      };
+
+      var _logErrors = function (data) {
+        console.log(data.errors);
+      };
 
       var User = function (options) {
         this.first_name = options.first_name;
@@ -22,26 +53,38 @@
       };
 
       var Login = function (options) {
-        this.username = options.username;
+        this.user_name = options.user_name;
         this.password = options.password;
+      };
+
+      this.checkUser = function() {
+        var token = $cookies.get('Access-Token');
+        _updateToken(token);
       };
 
       this.newUser = function (account) {
         var u = new User(account);
 
         return $http.post(regEndpoint, u).success(function(data) {
-          $location.path('/login');
-          console.log('userdata', data);
+          _routeNewUser(data);
         }).error(function(data){
-          console.log(data.errors);
+          _logErrors(data);
         });
       };
 
       this.userLogin = function (account) {
         var l = new Login(account);
-        console.log(l);
-        // $cookies.put('sessionToken', data.access_token);
-        // RB.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+        return $http.post(loginEndpoint, l).success(function (data){
+          _setCookies(data);
+        });
+
+      };
+
+      this.userLogout = function () {
+        $cookies.remove('Access-Token');
+        accessToken = '';
+        $location.path('/login');
       };
     }
 
