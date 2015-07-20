@@ -18,6 +18,11 @@
       $scope.userLogout = function () {
         UserService.userLogout();
       };
+
+      UserService.getUser().success(function(data){
+        console.log(data.results);
+        $scope.userData = data.results;
+      });
     }
   ]);
 

@@ -6,6 +6,7 @@
 
     .constant('RB', {
       URL: 'https://leetapp.herokuapp.com/',
+      // URL: 'http://bettys-macbook-pro.local:3000/',
       CONFIG: {
         headers: {
           'Access-Token' : ''
@@ -87,18 +88,19 @@
         });
       }
 
-  ])
-
-  .run(['UserService', '$rootScope',
-
-    function(UserService, $rootScope) {
-
-      $rootScope.$on('$stateChangeStart', function () {
-        console.log('d');
-        
-        UserService.checkUser();
-      });
-    }
   ]);
+
+  // .run(['UserService', '$rootScope', '$location',
+
+  //   function(UserService, $rootScope, $location) {
+
+  //     $rootScope.$on('$stateChangeStart', function () {
+  //       console.log('d');
+  //       if ($location.path() === '/register') {
+  //         UserService.checkUser();
+  //       }
+  //     });
+  //   }
+  // ]);
 
 }());

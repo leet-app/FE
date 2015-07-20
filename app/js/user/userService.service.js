@@ -10,6 +10,7 @@
 
       var regEndpoint = RB.URL + 'users/register',
           loginEndpoint = RB.URL + 'users/login',
+          singleUserEndpoint = RB.URL + 'user',
           accessToken = RB.CONFIG.headers['Access-Token'];
 
       var _routeUser = function (token) {
@@ -33,6 +34,7 @@
       var _setCookies = function (data) {
         console.log(data);
         $cookies.put('Access-Token', data.access_token);
+        accessToken = data.access_token;
         $location.path('/dashboard');
       };
 
@@ -60,7 +62,6 @@
         var token = $cookies.get('Access-Token');
         console.log('c');
         _updateToken(token);
-        // console.log(token);
       };
 
       this.newUser = function (account) {
@@ -88,7 +89,10 @@
         $cookies.remove('Access-Token');
         accessToken = undefined;
         $location.path('/login');
-        $state.reload();
+      };
+
+      this.getUser = function () {
+        return $http.get(singleUserEndpoint);
       };
     }
 
