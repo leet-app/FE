@@ -18,7 +18,6 @@
       $scope.userLogout = function () {
         UserService.userLogout();
       };
-
     }
   ]);
 

@@ -61,6 +61,16 @@
             }
           }
         })
+
+        // .state('auth', {
+        //  url: '/auth',
+        //  abstract: true,
+        //  template: '<ui-view/>',
+        //  controller: function(UserService) {
+        //   UserService.checkUser();
+        //  }
+        // })
+
         .state('dashboard', {
           url: '/dashboard',
           views: {
@@ -83,7 +93,9 @@
 
     function(UserService, $rootScope) {
 
-      $rootScope.$on('$routeChangeStart', function () {
+      $rootScope.$on('$stateChangeStart', function () {
+        console.log('d');
+        
         UserService.checkUser();
       });
     }

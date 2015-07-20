@@ -4,17 +4,19 @@
 
   angular.module('LeetApp')
 
-  .service('UserService', [ 'RB', '$http', '$location', '$cookies',
+  .service('UserService', [ 'RB', '$http', '$location', '$state', '$cookies',
 
-    function (RB, $http, $location, $cookies) {
+    function (RB, $http, $location, $state, $cookies) {
 
       var regEndpoint = RB.URL + 'users/register',
           loginEndpoint = RB.URL + 'users/login',
           accessToken = RB.CONFIG.headers['Access-Token'];
 
       var _routeUser = function (token) {
+        console.log('a');
         if (token === undefined) {
-          $location.path('/register');
+          // swal('Error', 'Please sign in to access dashboard.', 'error');
+          $state.go('register');
         } else if($location.path() === '/register') {
           $location.path('/dashboard');
         }
@@ -24,6 +26,7 @@
         if (token !== undefined) {
           accessToken = token;
         }
+        console.log('b');
         _routeUser(token);
       };
 
@@ -55,8 +58,9 @@
 
       this.checkUser = function() {
         var token = $cookies.get('Access-Token');
+        console.log('c');
         _updateToken(token);
-        console.log(token);
+        // console.log(token);
       };
 
       this.newUser = function (account) {
@@ -84,6 +88,7 @@
         $cookies.remove('Access-Token');
         accessToken = undefined;
         $location.path('/login');
+        $state.reload();
       };
     }
 
