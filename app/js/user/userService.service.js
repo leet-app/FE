@@ -56,6 +56,7 @@
       this.checkUser = function() {
         var token = $cookies.get('Access-Token');
         _updateToken(token);
+        console.log(token);
       };
 
       this.newUser = function (account) {

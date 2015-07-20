@@ -50,12 +50,8 @@
           </div>
       </md-toolbar>
 
-        <md-list>
-          <md-list-item>ATL - June 4, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
-          <md-divider ></md-divider>
-          <md-list-item>LAX - June 8, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
-          <md-divider ></md-divider>
-          <md-list-item>JFK - June 12, 2015 <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
+        <md-list ng-repeat="l in layoverList">
+          <md-list-item>{{l.airport}} {{l.city}} {{l.arrival_time}} {{l.departure_time}} <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
         </md-list>
     </div>
 

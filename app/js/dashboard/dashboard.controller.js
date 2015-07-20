@@ -23,9 +23,10 @@
           console.log('layover', layover);
         };
 
-        $scope.getLayovers = function() {
-
-        };
+        DashboardService.getLayovers().success(function(data) {
+          console.log(data.results);
+          $scope.layoverList = data.results;
+        });
       }
     ]);
 }());
