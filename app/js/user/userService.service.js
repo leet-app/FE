@@ -35,7 +35,7 @@
 
       var _setCookies = function (data) {
         $cookies.put('Access-Token', data.access_token);
-        RB.CONFIG.headers['Access-Token'] = data.access_token;
+        _updateToken();
         $location.path('/dashboard');
         console.log('_setCookies', RB.CONFIG);
       };
