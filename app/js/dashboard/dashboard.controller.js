@@ -4,9 +4,9 @@
 
   angular.module('LeetApp')
 
-  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth',
+  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth', '$location',
 
-      function ($scope, DashboardService, $http, RB, $cookies, Auth) {
+      function ($scope, DashboardService, $http, RB, $cookies, Auth, $location) {
 
         Auth.setHeaders();
         
@@ -29,32 +29,22 @@
             date: dateString
           };
 
-          console.log('arrive', arrival);
-          console.log('depart', depart);
-          console.log('layover log', layover);
+          $http.post(newLayoverEndpoint, layover, RB.CONFIG).success(function(data) {
+            swal('Swal', 'Have a good trip! :)', 'success');
+          });
         };
 
         DashboardService.getLayovers().success(function(data) {
           
-          var layoverArrayRaw = data.map(function (layover) {
-
-            if ($scope.twentyfour === true) {
-
-              layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, h:mm A');
-
-              layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('h:mm A');
-            } else {
-              layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, H:MM A');
-
-              layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('H:MM A');
-            }
+          var layoverFiltered = data.map(function (layover) {
+            
+            layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, h:mm A');
+            layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('h:mm A');
 
             return layover;
           });
 
-          console.log('layovers', layoverArrayRaw);
-
-          $scope.layoverList = layoverArrayRaw;
+          $scope.layoverList = layoverFiltered;
         });
       }
     ]);
