@@ -4,47 +4,34 @@
 
   angular.module('LeetApp')
 
-  .service('UserService', [ 'RB', '$http', '$location', '$state', '$cookies',
+  .service('UserService', [ 'RB', '$http', '$location', '$state', '$cookies', 'Auth',
 
-    function (RB, $http, $location, $state, $cookies) {
+    function (RB, $http, $location, $state, $cookies, Auth) {
 
       var regEndpoint = RB.URL + 'users/register',
           loginEndpoint = RB.URL + 'users/login',
           singleUserEndpoint = RB.URL + 'user';
 
       var _routeUser = function (token) {
-        if (token === undefine) {
+        if (token === undefined) {
           $location.path('/register');
         } else if($location.path() === '/register') {
           $location.path('/dashboard');
         }
       };
 
-      var _updateToken = function () {
-        // read cookie
-        var token = $cookies.get('Access-Token');
-        if (token !== undefined) {
-          RB.CONFIG.headers['Access-Token'] = token;
-        }
-      };
-
       var _routeNewUser = function(data) {
         $location.path('/login');
-        console.log('userdata', data);
       };
 
       var _setCookies = function (data) {
         $cookies.put('Access-Token', data.access_token);
-        _updateToken();
         $location.path('/dashboard');
-        console.log('_setCookies', RB.CONFIG);
       };
 
       var _destroyCookies = function() {
         $cookies.remove('Access-Token');
-        RB.CONFIG.headers['Access-Token'] = undefined;
         $location.path('/login');
-        console.log('_destroyCookies', RB.CONFIG);
       };
 
       var User = function (options) {
@@ -83,6 +70,7 @@
 
         return $http.post(loginEndpoint, l).success(function (data){
           _setCookies(data);
+          Auth.setHeaders(data);
         })
         .error(function(data) {
           swal('Error', data.message + ' Please try again.', 'error');
@@ -91,10 +79,10 @@
 
       this.userLogout = function () {
         _destroyCookies();
+        Auth.destroyHeaders();
       };
 
       this.getUser = function () {
-        console.log('getUser', RB.CONFIG);
         return $http.get(singleUserEndpoint, RB.CONFIG);
       };
     }

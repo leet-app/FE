@@ -4,9 +4,11 @@
 
   angular.module('LeetApp')
 
-  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB',
+  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth',
 
-      function ($scope, DashboardService, $http, RB) {
+      function ($scope, DashboardService, $http, RB, $cookies, Auth) {
+
+        Auth.setHeaders();
         
         $scope.newLayover = function(layover) {
 
@@ -26,7 +28,6 @@
 
           console.log('date', date);
           console.log('layover', layover);
-          console.log(RB);
         };
 
         DashboardService.getLayovers().success(function(data) {

@@ -4,9 +4,11 @@
 
   angular.module('LeetApp')
 
-  .service('DashboardService', ['RB', '$http', '$cookies',
+  .service('DashboardService', ['RB', '$http', '$cookies', 'Auth',
 
-    function (RB, $http, $cookies) {
+    function (RB, $http, $cookies, Auth) {
+
+      Auth.setHeaders();
 
       var newLayoverEndpoint = RB.URL + 'layovers/create',
           getUserLayoversEndpoint = RB.URL + 'layovers/user/layover';

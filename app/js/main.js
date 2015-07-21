@@ -6,7 +6,6 @@
 
     .constant('RB', {
       URL: 'https://leetapp.herokuapp.com/',
-      // URL: 'http://bettys-macbook-pro.local:3000/',
       CONFIG: {
         headers: {
           'Access-Token' : undefined
@@ -26,18 +25,6 @@
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-        // .state('home', {
-        //   url: '/',
-        //   views: {
-        //     'main' : {
-        //       templateUrl: 'js/templates/home.tpl.html',
-        //       controller: 'UserCtrl'
-        //     },
-        //     'sidebar' : {
-        //       templateUrl: 'js/templates/homenav.tpl.html'
-        //     }
-        //   }
-        // })
         .state('login', {
           url: '/',
             views: {
@@ -62,16 +49,6 @@
             }
           }
         })
-
-        // .state('auth', {
-        //  url: '/auth',
-        //  abstract: true,
-        //  template: '<ui-view/>',
-        //  controller: function(UserService) {
-        //   UserService.checkUser();
-        //  }
-        // })
-
         .state('dashboard', {
           url: '/dashboard',
           views: {
