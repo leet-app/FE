@@ -26,13 +26,13 @@
             date: dateString
           };
 
-          console.log('date', date);
+          console.log('date', dateString);
           console.log('layover', layover);
         };
 
         DashboardService.getLayovers().success(function(data) {
-          console.log(data.results);
-          $scope.layoverList = data.results;
+          console.log(data);
+          $scope.layoverList = data;
         });
       }
     ]);
