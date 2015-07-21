@@ -51,7 +51,7 @@
       </md-toolbar>
 
         <md-list ng-repeat="l in layoverList">
-          <md-list-item>{{l.airport}}, {{l.city}} || {{l.arrival_time}} / {{l.departure_time}} <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
+          <md-list-item>{{l.layover_info.airport}}, {{l.layover_info.city}} || {{l.layover_info.arrival_time}} / {{l.layover_info.departure_time}} <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
         </md-list>
     </div>
 

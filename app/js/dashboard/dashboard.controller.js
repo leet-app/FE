@@ -31,8 +31,14 @@
         };
 
         DashboardService.getLayovers().success(function(data) {
-          console.log(data);
-          $scope.layoverList = data;
+          
+          var layoverArray = data.map(function (layover) {
+            return layover;
+          });
+
+          console.log(layoverArray);
+
+          $scope.layoverList = layoverArray;
         });
       }
     ]);
