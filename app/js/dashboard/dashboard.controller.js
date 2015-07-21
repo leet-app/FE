@@ -32,13 +32,18 @@
 
         DashboardService.getLayovers().success(function(data) {
           
-          var layoverArray = data.map(function (layover) {
+          var layoverArrayRaw = data.map(function (layover) {
+
+            layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMMM Do YYYY, h:mm A');
+
+            layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('MMMM Do YYYY, h:mm A');
+
             return layover;
           });
 
-          console.log(layoverArray);
+          console.log('layovers', layoverArrayRaw);
 
-          $scope.layoverList = layoverArray;
+          $scope.layoverList = layoverArrayRaw;
         });
       }
     ]);

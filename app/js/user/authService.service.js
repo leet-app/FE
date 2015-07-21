@@ -15,7 +15,23 @@
 
       this.destroyHeaders = function () {
         RB.CONFIG.headers['Access-Token'] = undefined;
-        console.log('Destroy Headers', RB.CONFIG);
+        console.log('Destroyed Headers', RB.CONFIG);
+      };
+
+      this.checkHeaders = function () {
+        if (RB.CONFIG.headers['Access-Token'] === undefined) {
+          $location.path('/login');
+        } else if (RB.CONFIG.headers['Access-Token'] !== undefined) {
+          $location.path('/dashboard');
+        }
+      };
+
+      this.redirectUser = function() {
+        
+        if(RB.CONFIG.headers['Access-Token'] === undefined) {
+          $location.path('/login');
+        }
+
       };
     }
   ]);
