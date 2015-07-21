@@ -9,7 +9,7 @@
       // URL: 'http://bettys-macbook-pro.local:3000/',
       CONFIG: {
         headers: {
-          'Access-Token' : ''
+          'Access-Token' : undefined
         }
       }
     })
@@ -26,20 +26,20 @@
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-        .state('home', {
-          url: '/',
-          views: {
-            'main' : {
-              templateUrl: 'js/templates/home.tpl.html',
-              controller: 'UserCtrl'
-            },
-            'sidebar' : {
-              templateUrl: 'js/templates/homenav.tpl.html'
-            }
-          }
-        })
+        // .state('home', {
+        //   url: '/',
+        //   views: {
+        //     'main' : {
+        //       templateUrl: 'js/templates/home.tpl.html',
+        //       controller: 'UserCtrl'
+        //     },
+        //     'sidebar' : {
+        //       templateUrl: 'js/templates/homenav.tpl.html'
+        //     }
+        //   }
+        // })
         .state('login', {
-          url: '/login',
+          url: '/',
             views: {
               'main' : {
                 templateUrl: 'js/templates/login.tpl.html',

@@ -10,37 +10,41 @@
 
       var regEndpoint = RB.URL + 'users/register',
           loginEndpoint = RB.URL + 'users/login',
-          singleUserEndpoint = RB.URL + 'user',
-          accessToken = RB.CONFIG.headers['Access-Token'];
+          singleUserEndpoint = RB.URL + 'user';
 
       var _routeUser = function (token) {
-        console.log('a');
-        if (token === undefined) {
-          // swal('Error', 'Please sign in to access dashboard.', 'error');
-          $state.go('register');
+        if (token === undefine) {
+          $location.path('/register');
         } else if($location.path() === '/register') {
           $location.path('/dashboard');
         }
       };
 
-      var _updateToken = function (token) {
+      var _updateToken = function () {
+        // read cookie
+        var token = $cookies.get('Access-Token');
         if (token !== undefined) {
-          accessToken = token;
+          RB.CONFIG.headers['Access-Token'] = token;
         }
-        console.log('b');
-        _routeUser(token);
-      };
-
-      var _setCookies = function (data) {
-        console.log(data);
-        $cookies.put('Access-Token', data.access_token);
-        accessToken = data.access_token;
-        $location.path('/dashboard');
       };
 
       var _routeNewUser = function(data) {
         $location.path('/login');
         console.log('userdata', data);
+      };
+
+      var _setCookies = function (data) {
+        $cookies.put('Access-Token', data.access_token);
+        RB.CONFIG.headers['Access-Token'] = data.access_token;
+        $location.path('/dashboard');
+        console.log('_setCookies', RB.CONFIG);
+      };
+
+      var _destroyCookies = function() {
+        $cookies.remove('Access-Token');
+        RB.CONFIG.headers['Access-Token'] = undefined;
+        $location.path('/login');
+        console.log('_destroyCookies', RB.CONFIG);
       };
 
       var User = function (options) {
@@ -58,11 +62,11 @@
         this.password = options.password;
       };
 
-      this.checkUser = function() {
-        var token = $cookies.get('Access-Token');
-        console.log('c');
-        _updateToken(token);
-      };
+      // this.checkUser = function() {
+      //   var token = $cookies.get('Access-Token');
+      //   console.log('c');
+      //   _updateToken(token);
+      // };
 
       this.newUser = function (account) {
         var u = new User(account);
@@ -86,13 +90,12 @@
       };
 
       this.userLogout = function () {
-        $cookies.remove('Access-Token');
-        accessToken = undefined;
-        $location.path('/login');
+        _destroyCookies();
       };
 
       this.getUser = function () {
-        return $http.get(singleUserEndpoint);
+        console.log('getUser', RB.CONFIG);
+        return $http.get(singleUserEndpoint, RB.CONFIG);
       };
     }
 

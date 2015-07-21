@@ -19,10 +19,13 @@
         UserService.userLogout();
       };
 
-      UserService.getUser().success(function(data){
-        console.log(data.results);
-        $scope.userData = data.results;
-      });
+      $scope.getUser = function() {
+          UserService.getUser().success(function(data){
+          console.log(data.results);
+          $scope.userData = data.results;
+        });
+      };
+
     }
   ]);
 

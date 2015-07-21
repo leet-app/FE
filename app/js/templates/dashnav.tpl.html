@@ -6,8 +6,8 @@
       </div>
 </md-toolbar> -->
 
-<md-list ng-repeat="u in userData">
-          <md-list-item>{{u.username}} {{u.email}} {{u.first_name}} {{u.last_name}}</md-list-item>
+<md-list ng-module="getUser()" ng-repeat="u in userData">
+  <md-list-item>{{u.username}} {{u.email}} {{u.first_name}} {{u.last_name}}</md-list-item>
 </md-list>
 
 
