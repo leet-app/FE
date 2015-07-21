@@ -105,5 +105,5 @@ nav {
     margin-top: 3px;
     margin-bottom: 3px;
     text-align: left; }
-  .dashboard .userlayovers .md-list span {
-    float: right; }
+  .dashboard .userlayovers .material-icons {
+    color: white; }

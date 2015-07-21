@@ -14,29 +14,40 @@
 
           var newLayoverEndpoint = RB.URL + 'layovers/create',
               dateString = layover.date.toDateString(),
-              arrivalMoment = moment(),
-              deptMoment = moment();
+              arriveString = layover.arrival_time.toTimeString(),
+              departString = layover.dept_time.toTimeString();
+
+          var depart = moment(dateString + ' ' + arriveString).subtract(1, 'hours').format();
+          var arrival = moment(dateString + ' ' + departString).subtract(1, 'hours').format();
 
           layover = {
             short_name : layover.short_name,
             city : layover.city,
-            arrival_time : layover.arrival_time,
-            dept_time : layover.dept_time,
+            dept_time : depart,
+            arrival_time : arrival,
             display : layover.display,
             date: dateString
           };
 
-          console.log('date', dateString);
-          console.log('layover', layover);
+          console.log('arrive', arrival);
+          console.log('depart', depart);
+          console.log('layover log', layover);
         };
 
         DashboardService.getLayovers().success(function(data) {
           
           var layoverArrayRaw = data.map(function (layover) {
 
-            layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMMM Do YYYY, h:mm A');
+            if ($scope.twentyfour === true) {
 
-            layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('MMMM Do YYYY, h:mm A');
+              layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, h:mm A');
+
+              layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('h:mm A');
+            } else {
+              layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, H:MM A');
+
+              layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('H:MM A');
+            }
 
             return layover;
           });

@@ -29,11 +29,11 @@
         </md-input-container>
         <md-input-container>
             <label>Departure Time</label>
-            <input ng-model="layover.arrival_time" format="yyyy-MM-dd HH:mm:ss Z" type="time">
+            <input ng-model="layover.arrival_time" type="time">
         </md-input-container>
         <md-input-container>
           <md-checkbox ng-model="layover.display" ng-true-value="false" ng-false-value="true" aria-label="display or not display" class="md-warn">
-          <span>Check to hide this layover from other users.</span>
+          Check to hide this layover from other users.
           </md-checkbox>
         </md-input-container>
         <md-button class="md-raised md-primary">Submit</md-button>
@@ -49,10 +49,12 @@
             </h3>
           </div>
       </md-toolbar>
+      
+<!--       <p><md-checkbox ng-model="twentyfour" ng-true-value="true" ng-false-value="false" aria-label="display or not display" class="md-warn">24hr time.</md-checkbox></p> -->
 
-        <md-list ng-repeat="l in layoverList">
-          <md-list-item>{{l.layover_info.airport}}, {{l.layover_info.city}} || {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}} <md-button class="md-raised md-warn" id="edit">Edit</md-button></md-list-item>
-        </md-list>
+      <md-list ng-repeat="l in layoverList" layout="column">
+        <md-list-item><p> <span> <i class="material-icons">&#xE195;</i>{{l.layover_info.airport}} | {{l.layover_info.city}}</span> </br> {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}}</p> <md-button class="md-raised md-primary" id="edit">Meetups</md-button></md-list-item>
+      </md-list>
     </div>
 
 </div>

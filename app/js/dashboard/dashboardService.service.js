@@ -16,6 +16,7 @@
       this.getLayovers = function() {
         return $http.get(getUserLayoversEndpoint, RB.CONFIG);
       };
+      
     }
   ]);
 

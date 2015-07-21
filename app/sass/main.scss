@@ -121,10 +121,8 @@ nav {
 
   .userlayovers {
     @include contentdiv(50%);
-    .md-list {
-      span {
-        float:right;
-      }
+    .material-icons {
+      color: $w;
     }
   }
 }
