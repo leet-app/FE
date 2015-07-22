@@ -25,8 +25,21 @@
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-        .state('login', {
+        .state('home', {
           url: '/',
+            views: {
+              'main' : {
+                templateUrl: 'js/templates/home.tpl.html',
+                controller: 'UserCtrl'
+              },
+              'sidebar' : {
+                templateUrl: 'js/templates/homenav.tpl.html'
+              }
+          }
+        })
+
+        .state('login', {
+          url: '/login',
             views: {
               'main' : {
                 templateUrl: 'js/templates/login.tpl.html',

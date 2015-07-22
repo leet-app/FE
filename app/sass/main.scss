@@ -9,6 +9,7 @@ $mb: #2979FF;
 // opacity white
 $opacityw7: rgba(255, 255, 255, .7);
 $opacityw4: rgba(255, 255, 255, .4);
+$oblue:     rgba(33, 150, 243, .7);
 // end
 
 // mixins
@@ -16,7 +17,6 @@ $opacityw4: rgba(255, 255, 255, .4);
   // color:white;
   width:$width;
   margin: 0 auto;
-  clear:both;
   padding:50px;
   border-radius:3px;
   line-height:20px;
@@ -95,7 +95,22 @@ nav {
 }
 
 // HOME PAGE
+.home {
+  @include contentdiv(100%);
+  margin:0;
+  padding-left:0;
+  padding-right:0;
+  // background-color:$mb;
+  color:$w;
+  text-align: center;
+  // background-color:$oblue;
 
+  h3, h4 {
+    font-weight:normal;
+  }
+}
+
+// LOGIN PAGE
 .login {
   @include contentdiv(50%);
 
