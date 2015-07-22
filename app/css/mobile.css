@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  html {
+    background-color: #2196F3; }
+  .login {
+    width: 100%; }
+  .register {
+    width: 100%; }
+  .dashboard .addlayover {
+    width: 100%; }
+  .dashboard .userlayovers {
+    width: 100%; } }

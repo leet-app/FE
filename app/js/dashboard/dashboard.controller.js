@@ -38,7 +38,7 @@
           
           var layoverFiltered = data.map(function (layover) {
             
-            layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YY, h:mm A');
+            layover.layover_info.arrival_time = moment(layover.layover_info.arrival_time).format('MMM Do YYYY h:mm A');
             layover.layover_info.departure_time = moment(layover.layover_info.departure_time).format('h:mm A');
 
             return layover;

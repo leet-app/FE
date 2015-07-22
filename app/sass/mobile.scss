@@ -1,0 +1,27 @@
+$mb: #2196F3;
+
+@media (max-width: 768px) {
+
+  html  {
+    background-color: $mb;
+  }
+
+  .login {
+    width:100%;
+  }
+
+  .register {
+    width:100%;
+  }
+
+  .dashboard {
+
+    .addlayover {
+      width:100%;
+    }
+
+    .userlayovers {
+      width:100%;
+    }
+  }
+}
