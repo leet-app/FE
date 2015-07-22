@@ -6,6 +6,9 @@ html {
 *::before {
   box-sizing: inherit; }
 
+* {
+  outline: none; }
+
 html {
   background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -22,8 +25,7 @@ body {
 
 nav {
   background-color: transparent;
-  line-height: 64px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  line-height: 80px;
   color: white;
   margin-bottom: 5em;
   width: 100%; }
@@ -41,6 +43,10 @@ nav {
   nav .hamburger {
     float: left;
     padding-left: 3%; }
+  nav .top {
+    padding-right: 3%;
+    position: fixed;
+    float: right; }
 
 .container {
   width: 85%;

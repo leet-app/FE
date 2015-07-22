@@ -4,9 +4,9 @@
 
   angular.module('LeetApp')
 
-  .controller('SidenavCtrl', ['$scope', '$mdSidenav', '$timeout', '$log', '$mdUtil',
+  .controller('NavbarCtrl', ['$scope', '$mdSidenav', '$timeout', '$log', '$mdUtil', '$anchorScroll', '$location',
 
-    function ($scope, $mdSidenav, $timeout, $log, $mdUtil) {
+    function ($scope, $mdSidenav, $timeout, $log, $mdUtil, $anchorScroll, $location) {
 
       $scope.toggleLeft = buildToggler('left');
 
@@ -28,6 +28,10 @@
           });
       };
 
+      $scope.toTop = function () {
+        $location.hash('top');
+        $anchorScroll();
+      };
     }
   ]);
 

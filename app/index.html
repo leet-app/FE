@@ -34,10 +34,14 @@
 </head>
 <body ng-app="LeetApp" class="background">
 
+  <span size="0" id="top"></span>
+
   <!-- NAVBAR -->
-    <nav ng-controller="SidenavCtrl">
+    <nav ng-controller="NavbarCtrl">
 
       <span class="hamburger"><i ng-click="toggleLeft()" class="material-icons">&#xE5D2;</i></span>
+      <span class="top"><i ng-click="toTop()" class="material-icons">&#xE316;</i></span>
+      
       <div class="logo">
         <a href="#/">
           <i class="material-icons">&#xE904;</i>
@@ -49,7 +53,7 @@
     <!-- END -->
 
     <!-- SIDENAV -->
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2 side" md-component-id="left" ng-controller="SidenavCtrl" ui-view="sidebar">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2 side" md-component-id="left" ng-controller="NavbarCtrl" ui-view="sidebar">
     </md-sidenav>
     <!-- END -->
 
@@ -70,12 +74,7 @@
   <script src="js/vendor/loading-bar.js"></script>
   <script src="js/vendor/angular-cookies.js"></script>
   <script src="js/vendor/sweetalert.min.js"></script>
-  <script src="js/vendor/headroom.js"></script>
-  <script src="js/vendor/angular.headroom.js"></script>
   <script src="js/vendor/moment.js"></script>
-  <script src="js/vendor/picker.js"></script>
-  <script src="js/vendor/picker.date.js"></script>
-  <script src="js/vendor/picker.time.js"></script>
   <!-- END -->
 
   <!-- ANGULAR -->
@@ -92,7 +91,7 @@
   <script src="js/user/login.controller.js"></script>
   <script src="js/user/logout.controller.js"></script>
   <script src="js/user/user.controller.js"></script>
-  <script src="js/sidenav/sidenav.controller.js"></script>
+  <script src="js/navbar/navbar.controller.js"></script>
   <script src="/js/dashboard/dashboard.controller.js"></script>
   <!-- end -->
 
