@@ -30,7 +30,7 @@
           };
 
           $http.post(newLayoverEndpoint, layover, RB.CONFIG).success(function(data) {
-            swal('Swal', 'Have a good trip! :)', 'success');
+            swal('Success', 'Have a good trip! :)', 'success');
           });
         };
 

@@ -23,7 +23,7 @@ nav {
     text-align: center;
     margin: 0 auto;
     color: white;
-    font-size: 35px;
+    font-size: 60px;
     font-family: "Nunito", "sans-serif";
     width: 200px; }
     nav .logo a {
@@ -50,13 +50,17 @@ nav {
   padding-left: 0;
   padding-right: 0;
   color: white;
-  text-align: center; }
+  text-align: center;
+  background-color: transparent; }
   .home form {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3px;
     margin-bottom: 3px;
     text-align: left; }
+  .home p {
+    background-color: transparent;
+    color: #2979FF; }
   .home h3, .home h4 {
     font-weight: normal; }
 

@@ -72,7 +72,7 @@ nav {
     text-align: center;
     margin: 0 auto;
     color:white;
-    font-size: 35px;
+    font-size: 60px;
     font-family: $nu;
     width:200px;
     a {
@@ -100,10 +100,14 @@ nav {
   margin:0;
   padding-left:0;
   padding-right:0;
-  // background-color:$mb;
   color:$w;
   text-align: center;
-  // background-color:$oblue;
+  background-color:transparent;
+
+  p {
+    background-color:transparent;
+    color:$mb;
+  }
 
   h3, h4 {
     font-weight:normal;
