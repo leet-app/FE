@@ -40,7 +40,8 @@ nav {
         color: white; }
   nav .hamburger {
     float: left;
-    padding-left: 3%; }
+    padding-left: 3%;
+    position: fixed; }
 
 .container {
   width: 85%;
@@ -55,11 +56,9 @@ nav {
   margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
   color: white;
   text-align: center;
-  background-color: transparent; }
+  background-color: #2196F3; }
   .home form {
     margin-left: auto;
     margin-right: auto;
@@ -67,8 +66,7 @@ nav {
     margin-bottom: 3px;
     text-align: left; }
   .home p {
-    background-color: transparent;
-    color: #2196F3; }
+    color: white; }
   .home h3, .home h4 {
     font-weight: normal; }
 
@@ -182,6 +180,14 @@ nav {
         .dashboard .userlayovers .layovers li .l .meetup {
           display: inline-block;
           vertical-align: middle; }
+
+.promo .md-iphone-5 {
+  font-size: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: center; }
 
 @media (max-width: 800px) {
   html {

@@ -101,6 +101,7 @@ nav {
   .hamburger {
     float:left;
     padding-left: 3%;
+    position:fixed;
   }
 }
 
@@ -113,15 +114,12 @@ nav {
 .home {
   @include contentdiv(100%);
   margin:0;
-  padding-left:0;
-  padding-right:0;
   color:$w;
   text-align: center;
-  background-color:transparent;
+  background-color:$mb;
 
   p {
-    background-color:transparent;
-    color:$mb;
+    color:$w;
   }
 
   h3, h4 {
@@ -202,6 +200,14 @@ nav {
   }
 }
 // END
+
+//MINIMAL DEVICES
+.promo {
+  .md-iphone-5 {
+    font-size:.5em;
+    @include csscentertag(center);
+  }
+}
 
 // MOBILE
 @media (max-width: 800px) {

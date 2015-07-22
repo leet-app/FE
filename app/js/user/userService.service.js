@@ -27,6 +27,11 @@
       var _setCookies = function (data) {
         $cookies.put('Access-Token', data.access_token);
         $location.path('/dashboard');
+
+        swal({
+          title: 'Hey there!',
+          text: '<div class="promo"><p>Thanks for using Leet. Don\'\t forget to check out out our mobile website.</p><br></br><div class="md-iphone-5 md-white-device md-glare"> <div class="md-body"> <div class="md-buttons"></div> <div class="md-front-camera"></div> <div class="md-top-speaker"></div> <div class="md-screen"> <-- Your content here --> </div> <button class="md-home-button"></button> </div> </div></div>',
+          html: true });
       };
 
       var _destroyCookies = function() {

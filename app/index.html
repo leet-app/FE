@@ -35,8 +35,7 @@
 <body ng-app="LeetApp" class="background">
 
   <!-- NAVBAR -->
-  <div class="wrapper">
-    <nav ng-controller="SidenavCtrl" headroom>
+    <nav ng-controller="SidenavCtrl">
 
       <span class="hamburger"><i ng-click="toggleLeft()" class="material-icons">&#xE5D2;</i></span>
       <div class="logo">
@@ -58,7 +57,6 @@
     <div class="container" ui-view="main">
     </div>
     <!-- END -->
-  </div>
   <!-- END -->
 
   <!-- VENDOR -->
