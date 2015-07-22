@@ -1,3 +1,6 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
 // VARIABLES
 $rb: 'Roboto', 'sans-serif';
 $nu: 'Nunito', 'sans-serif';
@@ -14,14 +17,26 @@ $oblue:     rgba(33, 150, 243, .7);
 
 // mixins
 @mixin contentdiv($width) {
-  // color:white;
   width:$width;
   margin: 0 auto;
   padding:50px;
   border-radius:3px;
   line-height:20px;
-  margin-bottom:5em;
+  margin-bottom:1em;
   background-color: $opacityw7;
+  form {
+    @include csscentertag(left);
+  }
+}
+
+@mixin contentdivmobile() {
+  width:80%;
+  margin:0 auto;
+  padding:20px;
+  border-radius:3px;
+  line-height:20px;
+  margin-bottom:5em;
+  background-color: #fcfcfd;
   form {
     @include csscentertag(left);
   }
@@ -140,41 +155,92 @@ nav {
 
   .userlayovers {
     @include contentdiv(50%);
+    background:none;
     .material-icons {
       color: $w;
+    }
+
+    .layovers {
+      display: inline-block;
+      vertical-align: middle;
+      @include outer-container;
+      padding-left:0px;
+      li {
+        @include span-columns(6);
+        padding-bottom:20px;
+        width:100%;
+        margin-left:0;
+        .meetup {
+          float:right;
+          display:inline-block;
+          vertical-align: middle;
+        }
+        .l {
+          float:left;
+          width:100%;
+          display:inline-block;
+          vertical-align: middle;
+          color:$w;
+          background-color:$mb;
+          border-radius:3px;
+          padding:10px;
+          line-height:30px;
+          .airport {
+            color:$mb;
+            font-family: $nu;
+            background-color:white;
+            padding:5px;
+            border-radius:3px;
+          }
+          .meetup {
+            display:inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
     }
   }
 }
 // END
 
-//SIDEBAR
-
-.side {
-}
-
 // MOBILE
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   html  {
+    background: transparent;
     background-color: $mb;
-    background-image: none;
+    color:#666666;
   }
 
   .login {
-    width:100%;
+    @include contentdivmobile();
   }
 
   .register {
-    width:100%;
+    @include contentdivmobile();
   }
 
   .dashboard {
 
     .addlayover {
-      width:100%;
+      @include contentdivmobile();
     }
 
     .userlayovers {
-      width:100%;
+      @include contentdivmobile();
+      background:none;
+        .layovers {
+
+          li {
+            .meetup {
+              float:top;
+              display:inline-block;
+            }
+            .l {
+              float:bottom;
+              display:inline-block;
+            }
+          }
+        }
+      }
     }
-  }
 }

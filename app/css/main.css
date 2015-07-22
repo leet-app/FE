@@ -1,4 +1,12 @@
 html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
   background: url(../images/black-and-white-city-man-people.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -44,7 +52,7 @@ nav {
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0;
   padding-left: 0;
@@ -70,7 +78,7 @@ nav {
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.7); }
   .login form {
     margin-left: auto;
@@ -89,7 +97,7 @@ nav {
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.7); }
   .register form {
     margin-left: auto;
@@ -104,7 +112,7 @@ nav {
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.7); }
   .dashboard .addlayover form {
     margin-left: auto;
@@ -119,8 +127,9 @@ nav {
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
-  margin-bottom: 5em;
-  background-color: rgba(255, 255, 255, 0.7); }
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.7);
+  background: none; }
   .dashboard .userlayovers form {
     margin-left: auto;
     margin-right: auto;
@@ -129,16 +138,116 @@ nav {
     text-align: left; }
   .dashboard .userlayovers .material-icons {
     color: white; }
+  .dashboard .userlayovers .layovers {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px; }
+    .dashboard .userlayovers .layovers::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .dashboard .userlayovers .layovers li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      padding-bottom: 20px;
+      width: 100%;
+      margin-left: 0; }
+      .dashboard .userlayovers .layovers li:last-child {
+        margin-right: 0; }
+      .dashboard .userlayovers .layovers li .meetup {
+        float: right;
+        display: inline-block;
+        vertical-align: middle; }
+      .dashboard .userlayovers .layovers li .l {
+        float: left;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        background-color: #2196F3;
+        border-radius: 3px;
+        padding: 10px;
+        line-height: 30px; }
+        .dashboard .userlayovers .layovers li .l .airport {
+          color: #2196F3;
+          font-family: "Nunito", "sans-serif";
+          background-color: white;
+          padding: 5px;
+          border-radius: 3px; }
+        .dashboard .userlayovers .layovers li .l .meetup {
+          display: inline-block;
+          vertical-align: middle; }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   html {
+    background: transparent;
     background-color: #2196F3;
-    background-image: none; }
+    color: #666666; }
   .login {
-    width: 100%; }
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    margin-bottom: 5em;
+    background-color: #fcfcfd; }
+    .login form {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      text-align: left; }
   .register {
-    width: 100%; }
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    margin-bottom: 5em;
+    background-color: #fcfcfd; }
+    .register form {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      text-align: left; }
   .dashboard .addlayover {
-    width: 100%; }
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    margin-bottom: 5em;
+    background-color: #fcfcfd; }
+    .dashboard .addlayover form {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      text-align: left; }
   .dashboard .userlayovers {
-    width: 100%; } }
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    margin-bottom: 5em;
+    background-color: #fcfcfd;
+    background: none; }
+    .dashboard .userlayovers form {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      text-align: left; }
+    .dashboard .userlayovers .layovers li .meetup {
+      float: top;
+      display: inline-block; }
+    .dashboard .userlayovers .layovers li .l {
+      float: bottom;
+      display: inline-block; } }

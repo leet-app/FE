@@ -34,7 +34,7 @@
         <md-input-container>
           <md-checkbox ng-model="layover.display" ng-true-value="false" ng-false-value="true" aria-label="display or not display" class="md-warn">
           </md-checkbox>
-          <p>check the box hide this layover from other users.</p>
+          <p>check to hide this layover from other users.</p>
         </md-input-container>
         <md-button class="md-raised md-primary">Submit</md-button>
     </form>
@@ -42,26 +42,14 @@
   </div>
 
     <div class="userlayovers">
-      <md-toolbar>
-          <div class="md-toolbar-tools">
-            <h3>
-              <span>your layovers</span>
-            </h3>
-          </div>
-      </md-toolbar>
-      
-<!--       <p><md-checkbox ng-model="twentyfour" ng-true-value="true" ng-false-value="false" aria-label="display or not display" class="md-warn">24hr time.</md-checkbox></p> -->
+      <ul class="layovers">
 
-      <md-list ng-repeat="l in layoverList" layout="column">
-        <md-list-item>
-        {{l.layover_info.airport}} | {{l.layover_info.city}}
+        <li layout layout-padding ng-repeat="l in layoverList">
+          <span class="l"> <span class="airport">{{l.layover_info.airport}}</span> {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}}<span class="meetup"><md-button class="" id="edit">Meetup</md-button></span></span>
+        </li>
 
-        </br>
+    </ul>
 
-        {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}} <md-button class="md-raised md-primary" id="edit">Meetups</md-button>
-
-        </md-list-item>
-      </md-list>
     </div>
 
 </div>
