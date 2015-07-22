@@ -151,3 +151,30 @@ nav {
 
 .side {
 }
+
+// MOBILE
+@media (min-width: 800px) {
+  html  {
+    background-color: $mb;
+    background-image: none;
+  }
+
+  .login {
+    width:100%;
+  }
+
+  .register {
+    width:100%;
+  }
+
+  .dashboard {
+
+    .addlayover {
+      width:100%;
+    }
+
+    .userlayovers {
+      width:100%;
+    }
+  }
+}

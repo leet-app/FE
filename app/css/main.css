@@ -129,3 +129,16 @@ nav {
     text-align: left; }
   .dashboard .userlayovers .material-icons {
     color: white; }
+
+@media (min-width: 800px) {
+  html {
+    background-color: #2196F3;
+    background-image: none; }
+  .login {
+    width: 100%; }
+  .register {
+    width: 100%; }
+  .dashboard .addlayover {
+    width: 100%; }
+  .dashboard .userlayovers {
+    width: 100%; } }
