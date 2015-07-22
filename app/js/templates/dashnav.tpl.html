@@ -1,4 +1,4 @@
-  <md-toolbar ng-mogule="getUser()">
+  <md-toolbar>
     <div class="md-toolbar-tools userData">
       <h3>
         <span>hi, {{userData.first_name}} {{userData.last_name}}!</span>
@@ -8,7 +8,7 @@
     </div>
   </md-toolbar>
 
-  <md-toolbar ng-click="userLogout()">
+  <md-toolbar ng-controller="LogoutCtrl" ng-click="userLogout()">
         <div class="md-toolbar-tools">
           <h3>
             <span>logout</span>

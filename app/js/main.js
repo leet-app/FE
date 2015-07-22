@@ -43,7 +43,7 @@
             views: {
               'main' : {
                 templateUrl: 'js/templates/login.tpl.html',
-                controller: 'UserCtrl'
+                controller: 'LoginCtrl'
               },
               'sidebar' : {
                 templateUrl: 'js/templates/homenav.tpl.html'
