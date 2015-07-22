@@ -40,8 +40,7 @@ nav {
         color: white; }
   nav .hamburger {
     float: left;
-    padding-left: 3%;
-    position: fixed; }
+    padding-left: 3%; }
 
 .container {
   width: 85%;
