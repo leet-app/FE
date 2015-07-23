@@ -45,7 +45,14 @@ nav {
     padding-right: 3%;
     position: fixed;
     float: right;
-    color: #2196F3; }
+    color: white;
+    display: inline; }
+    nav .top:hover {
+      color: #2196F3;
+      transition: 1s all ease;
+      cursor: pointer;
+      margin: 0;
+      padding: 0; }
 
 .container {
   width: 85%;
@@ -189,34 +196,49 @@ nav {
           display: inline-block;
           vertical-align: middle; }
 
-.meetup .thisLayover {
+.meetupPage .myLayover {
   width: 50%;
   margin: 0 auto;
   padding: 50px;
   border-radius: 3px;
   line-height: 20px;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.7); }
-  .meetup .thisLayover form {
+  background-color: rgba(255, 255, 255, 0.7);
+  background: none; }
+  .meetupPage .myLayover form {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3px;
     margin-bottom: 3px;
     text-align: left; }
-  .meetup .thisLayover .material-icons {
-    color: white; }
-  .meetup .thisLayover .layovers {
+
+.meetupPage .otherUserLayovers {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 3px;
+  line-height: 20px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.7);
+  background: none; }
+  .meetupPage .otherUserLayovers form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: left; }
+  .meetupPage .otherUserLayovers .layovers {
     display: inline-block;
     vertical-align: middle;
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0px; }
-    .meetup .thisLayover .layovers::after {
+    .meetupPage .otherUserLayovers .layovers::after {
       clear: both;
       content: "";
       display: table; }
-    .meetup .thisLayover .layovers li {
+    .meetupPage .otherUserLayovers .layovers li {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -224,9 +246,9 @@ nav {
       padding-bottom: 20px;
       width: 100%;
       margin-left: 0; }
-      .meetup .thisLayover .layovers li:last-child {
+      .meetupPage .otherUserLayovers .layovers li:last-child {
         margin-right: 0; }
-      .meetup .thisLayover .layovers li .l {
+      .meetupPage .otherUserLayovers .layovers li .l {
         float: left;
         width: 100%;
         display: inline-block;
@@ -236,12 +258,18 @@ nav {
         border-radius: 3px;
         padding: 10px;
         line-height: 30px; }
-        .meetup .thisLayover .layovers li .l .airport {
+        .meetupPage .otherUserLayovers .layovers li .l .user {
           color: #2196F3;
           font-family: "Nunito", "sans-serif";
           background-color: white;
           padding: 5px;
-          border-radius: 3px; }
+          border-radius: 3px;
+          display: inline;
+          vertical-align: middle; }
+        .meetupPage .otherUserLayovers .layovers li .l .times {
+          float: right;
+          display: inline;
+          vertical-align: middle; }
 
 .promo .md-iphone-5 {
   font-size: .5em;
@@ -318,4 +346,19 @@ nav {
       display: inline-block; }
     .dashboard .userlayovers .layovers li .l {
       float: bottom;
-      display: inline-block; } }
+      display: inline-block; }
+  .meetups .otherLayovers {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    margin-bottom: 5em;
+    background-color: #fcfcfd;
+    background: none; }
+    .meetups .otherLayovers form {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      text-align: left; } }

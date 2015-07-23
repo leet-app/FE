@@ -73,9 +73,10 @@ body {
   font-family: $rb;
   background-color: $t;
   outline:none;
-    a {
-      text-decoration: none;
-    }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 nav {
@@ -93,6 +94,7 @@ nav {
     font-size: 80px;
     font-family: $nu;
     width:300px;
+
     span {
       color: $w;
     }
@@ -107,7 +109,16 @@ nav {
     padding-right: 3%;
     position:fixed;
     float:right;
-    color:$mb
+    color: $w;
+    display:inline;
+
+    &:hover {
+      color:$mb;
+      transition: 1s all ease;
+      cursor:pointer;
+      margin:0;
+      padding:0;
+    }
   }
 }
 
@@ -139,6 +150,7 @@ nav {
 
   a {
     color:$w;
+
     &:visited {
       color:$w;
     }
@@ -169,17 +181,21 @@ nav {
       vertical-align: middle;
       @include outer-container;
       padding-left:0px;
+      
       li {
         @include span-columns(6);
         padding-bottom:20px;
         width:100%;
         margin-left:0;
+        
         .meetup {
           float:right;
           display:inline-block;
           vertical-align: middle;
+          
           a {
             color:$w;
+
               &:visited {
                 color:$w;
               }
@@ -196,6 +212,7 @@ nav {
           border-radius:3px;
           padding:10px;
           line-height:30px;
+          
           .airport {
             color:$mb;
             font-family: $nu;
@@ -203,6 +220,7 @@ nav {
             padding:5px;
             border-radius:3px;
           }
+
           .meetup {
             display:inline-block;
             vertical-align: middle;
@@ -215,53 +233,67 @@ nav {
 // END
 
 // MEETUP
-.meetup {
-  
-  .thisLayover {
-    @include contentdiv(50%);
-    
-    .material-icons {
-      color: $w;
-    }
+.meetupPage {
 
-     .layovers {
+  .myLayover {
+    @include contentdiv(50%);
+    background:none;
+  }
+
+  .otherUserLayovers {
+
+    @include contentdiv(50%);
+    background:none;
+
+    .layovers {
       display: inline-block;
       vertical-align: middle;
       @include outer-container;
       padding-left:0px;
-       li {
-         @include span-columns(6);
-         padding-bottom:20px;
-         width:100%;
-         margin-left:0;
+      
+      li {
+        @include span-columns(6);
+        padding-bottom:20px;
+        width:100%;
+        margin-left:0;
 
-         .l {
-           float:left;
-           width:100%;
-           display:inline-block;
-           vertical-align: middle;
-           color:$w;
-           background-color:$mb;
-           border-radius:3px;
-           padding:10px;
-           line-height:30px;
+        .l {
+          float:left;
+          width:100%;
+          display:inline-block;
+          vertical-align: middle;
+          color:$w;
+          background-color:$mb;
+          border-radius:3px;
+          padding:10px;
+          line-height:30px;
+          
+          .user {
+            color:$mb;
+            font-family: $nu;
+            background-color:white;
+            padding:5px;
+            border-radius:3px;
+            display: inline;
+            vertical-align: middle;
+          }
 
-           .airport {
-             color:$mb;
-             font-family: $nu;
-             background-color:white;
-             padding:5px;
-             border-radius:3px;
-           }
-         }
-       }
-     }
+          .times {
+            float:right;
+            display: inline;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
   }
 }
 // END
 
 //MINIMAL DEVICES
 .promo {
+
   .md-iphone-5 {
     font-size:.5em;
     @include csscentertag(center);
@@ -270,6 +302,7 @@ nav {
 
 // MOBILE
 @media (max-width: 800px) {
+
   html  {
     background: transparent;
     background-color: $mb;
@@ -293,6 +326,7 @@ nav {
     .userlayovers {
       @include contentdivmobile();
       background:none;
+
         .layovers {
 
           li {
@@ -309,4 +343,25 @@ nav {
         }
       }
     }
+    .meetups {
+
+      .otherLayovers {
+        @include contentdivmobile();
+        background:none;
+
+        li { 
+
+          .l {
+            
+            .user {
+
+            }
+
+            .times {
+
+            }
+          }
+        }
+    }
+  }
 }

@@ -19,10 +19,14 @@
       };
 
       this.checkHeaders = function () {
-        if (RB.CONFIG.headers['Access-Token'] === undefined) {
+
+        var accessToken = $cookies.get('Access-Token');
+
+        if (accessToken) {
+          $location.path();
+        } else {
+          swal("Error", "Please log in.", "error");
           $location.path('/login');
-        } else if (RB.CONFIG.headers['Access-Token'] !== undefined) {
-          $location.path('/dashboard');
         }
       };
 

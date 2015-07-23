@@ -9,6 +9,8 @@
       function ($scope, DashboardService, $http, RB, $cookies, Auth, $location, $stateParams) {
 
         Auth.setHeaders();
+
+        Auth.checkHeaders();
         
         $scope.newLayover = function(layover) {
 

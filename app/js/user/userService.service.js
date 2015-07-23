@@ -30,7 +30,7 @@
 
         swal({
           title: 'Hey there!',
-          text: '<div class="promo"><p>Thanks for using Leet. Don\'\t forget to check out out our mobile website.</p><br></br><div class="md-iphone-5 md-white-device md-glare"> <div class="md-body"> <div class="md-buttons"></div> <div class="md-front-camera"></div> <div class="md-top-speaker"></div> <div class="md-screen"> <-- Your content here --> </div> <button class="md-home-button"></button> </div> </div></div>',
+          text: '<div class="promo"><p>Thanks so much for using Leet. Don\'t forget to take us on the go!</p><br></br><div class="md-iphone-5 md-white-device md-glare"> <div class="md-body"> <div class="md-buttons"></div> <div class="md-front-camera"></div> <div class="md-top-speaker"></div> <div class="md-screen"> <img src="./images/mobile.png"> </div> <button class="md-home-button"></button> </div> </div></div>',
           html: true });
       };
 
