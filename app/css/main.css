@@ -25,7 +25,7 @@ body {
 
 nav {
   background-color: transparent;
-  line-height: 80px;
+  line-height: 90px;
   color: white;
   margin-bottom: 5em;
   width: 100%; }
@@ -33,20 +33,19 @@ nav {
     text-align: center;
     margin: 0 auto;
     color: white;
-    font-size: 60px;
+    font-size: 80px;
     font-family: "Nunito", "sans-serif";
-    width: 200px; }
-    nav .logo a {
+    width: 300px; }
+    nav .logo span {
       color: white; }
-      nav .logo a:visited {
-        color: white; }
   nav .hamburger {
     float: left;
     padding-left: 3%; }
   nav .top {
     padding-right: 3%;
     position: fixed;
-    float: right; }
+    float: right;
+    color: #2196F3; }
 
 .container {
   width: 85%;

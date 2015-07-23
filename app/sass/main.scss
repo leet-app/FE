@@ -80,7 +80,7 @@ body {
 
 nav {
   background-color: $t;
-  line-height:80px;
+  line-height:90px;
   color:$w;
   margin-bottom:5em;
   width:100%;
@@ -90,14 +90,11 @@ nav {
     text-align: center;
     margin: 0 auto;
     color:white;
-    font-size: 60px;
+    font-size: 80px;
     font-family: $nu;
-    width:200px;
-    a {
-    color: $w;
-      &:visited {
-        color:$w;
-      }
+    width:300px;
+    span {
+      color: $w;
     }
   }
 
@@ -110,6 +107,7 @@ nav {
     padding-right: 3%;
     position:fixed;
     float:right;
+    color:$mb
   }
 }
 
