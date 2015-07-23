@@ -46,7 +46,7 @@
                 controller: 'LoginCtrl'
               },
               'sidebar' : {
-                templateUrl: 'js/templates/homenav.tpl.html'
+                templateUrl: 'js/templates/homenav.tpl.html',
               }
           }
         })
@@ -68,6 +68,20 @@
             'main': { 
               templateUrl: 'js/templates/dashboard.tpl.html',
               controller: 'DashboardCtrl'
+            },
+
+            'sidebar': {
+              templateUrl: 'js/templates/dashnav.tpl.html',
+              controller: 'UserCtrl'
+            }
+          }
+        })
+        .state('meetup', {
+          url: '/layover/:id/meetup',
+          views: {
+            'main': { 
+              templateUrl: 'js/templates/meetup.tpl.html',
+              controller: 'MeetupCtrl'
             },
 
             'sidebar': {

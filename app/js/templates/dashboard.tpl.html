@@ -46,7 +46,7 @@
 
         <li layout layout-padding ng-repeat="l in layoverList">
           <span class="l"> 
-          <span class="airport">{{l.layover_info.airport}}</span> {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}} <span class="meetup"><md-button id="edit">Meetup</md-button></span>
+          <span class="airport">{{l.layover_info.airport}}</span> {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}} <span class="meetup"><md-button id="edit"><a href="#/layover/{{l.id}}/meetup">Meetup</a></md-button></span>
         </li>
     </ul>
 

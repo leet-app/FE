@@ -20,8 +20,8 @@
       };
 
         UserService.getUser().success(function(data){
-          console.log(data);
           $scope.userData = data;
+          console.log(data);
         });
     }
   ]);

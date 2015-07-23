@@ -1,0 +1,14 @@
+<div class="meetup">
+  <div ng-repeat=" t in thisLayover">
+    {{ t.airport }}
+  </div>
+
+    <ul class="layovers">
+
+      <li layout layout-padding ng-repeat="l in otherLayoverList">
+        <span class="l"> 
+        <span class="airport">{{l.layover_info.airport}}</span> {{l.layover_info.arrival_time}} - {{l.layover_info.departure_time}}</span>
+      </li>
+  </ul>
+
+</div>

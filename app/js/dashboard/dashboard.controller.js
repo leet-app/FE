@@ -4,9 +4,9 @@
 
   angular.module('LeetApp')
 
-  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth', '$location',
+  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth', '$location', '$stateParams',
 
-      function ($scope, DashboardService, $http, RB, $cookies, Auth, $location) {
+      function ($scope, DashboardService, $http, RB, $cookies, Auth, $location, $stateParams) {
 
         Auth.setHeaders();
         

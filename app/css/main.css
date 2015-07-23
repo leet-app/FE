@@ -166,6 +166,10 @@ nav {
         float: right;
         display: inline-block;
         vertical-align: middle; }
+        .dashboard .userlayovers .layovers li .meetup a {
+          color: white; }
+          .dashboard .userlayovers .layovers li .meetup a:visited {
+            color: white; }
       .dashboard .userlayovers .layovers li .l {
         float: left;
         width: 100%;
@@ -185,6 +189,60 @@ nav {
         .dashboard .userlayovers .layovers li .l .meetup {
           display: inline-block;
           vertical-align: middle; }
+
+.meetup .thisLayover {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 3px;
+  line-height: 20px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.7); }
+  .meetup .thisLayover form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: left; }
+  .meetup .thisLayover .material-icons {
+    color: white; }
+  .meetup .thisLayover .layovers {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px; }
+    .meetup .thisLayover .layovers::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .meetup .thisLayover .layovers li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      padding-bottom: 20px;
+      width: 100%;
+      margin-left: 0; }
+      .meetup .thisLayover .layovers li:last-child {
+        margin-right: 0; }
+      .meetup .thisLayover .layovers li .l {
+        float: left;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        background-color: #2196F3;
+        border-radius: 3px;
+        padding: 10px;
+        line-height: 30px; }
+        .meetup .thisLayover .layovers li .l .airport {
+          color: #2196F3;
+          font-family: "Nunito", "sans-serif";
+          background-color: white;
+          padding: 5px;
+          border-radius: 3px; }
 
 .promo .md-iphone-5 {
   font-size: .5em;

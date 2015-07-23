@@ -4,9 +4,9 @@
 
   angular.module('LeetApp')
 
-  .service('DashboardService', ['RB', '$http', '$cookies', 'Auth',
+  .service('DashboardService', ['RB', '$http', 'Auth',
 
-    function (RB, $http, $cookies, Auth) {
+    function (RB, $http, Auth) {
 
       Auth.setHeaders();
 
