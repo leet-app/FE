@@ -10,30 +10,23 @@
             </h3>
           </div>
     </md-toolbar>
-
-    <!-- <md-toolbar >
-          <div class="md-toolbar-tools">
-            <h3>
-              <span>{{ l.layover_info.arrival_time}} - {{ l.layover_info.departure_time }} <md-button><a href="#/dashboard">back to dashboard</md-button></span>
-            </h3>
-          </div>
-    </md-toolbar> -->
+    
   </div>
 
-    <div class="otherUserLayovers">
-      
-      <ul class="layovers">
-        <li layout layout-padding ng-repeat="l in otherLayoverList">
-          
-          <span class="l">
-            <span class="user">{{ l.creator.first_name }} {{ l.creator.last_name }} ({{ l.creator.user_name }})</span> 
-            <span class="times">{{l.layover_info.arrival_time}} - {{l.layover_info.departure_time }}</span>
-          </span>
-
-          </li>
+  <div class="otherUserLayovers">
+    
+    <ul class="layovers">
+      <li layout layout-padding ng-repeat="l in otherLayoverList">
         
-      </ul>      
+        <span class="l">
+          <span class="user">{{ l.creator.first_name }} {{ l.creator.last_name }} ({{ l.creator.user_name }})</span> 
+          <span class="times">{{l.layover_info.arrival_time}} - {{l.layover_info.departure_time }}</span>
+        </span>
 
-    </div>
+        </li>
+      
+    </ul>      
+
+  </div>
 
   </div>

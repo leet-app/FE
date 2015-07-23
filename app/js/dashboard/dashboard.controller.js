@@ -4,9 +4,9 @@
 
   angular.module('LeetApp')
 
-  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth', '$location', '$stateParams',
+  .controller('DashboardCtrl', ['$scope', 'DashboardService', '$http', 'RB', '$cookies', 'Auth', '$location', '$stateParams', '$state',
 
-      function ($scope, DashboardService, $http, RB, $cookies, Auth, $location, $stateParams) {
+      function ($scope, DashboardService, $http, RB, $cookies, Auth, $location, $stateParams, $state) {
 
         Auth.setHeaders();
 
@@ -32,6 +32,7 @@
           };
 
           $http.post(newLayoverEndpoint, layover, RB.CONFIG).success(function(data) {
+            $state.reload('dashboard');
             swal('Success', 'Have a good trip! :)', 'success');
           });
         };
